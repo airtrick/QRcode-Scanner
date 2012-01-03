@@ -161,7 +161,7 @@
 
     //InfoController * conInfo = [self.storyboard instantiateViewControllerWithIdentifier:@"Info"];
     conInfo.dataString = [parsedResult stringForDisplay];
-    [conInfo.image initWithImage:[parsedResult icon]];
+    conInfo.image = [parsedResult icon];
     [self.navigationController pushViewController:conInfo animated:NO];
 }
 

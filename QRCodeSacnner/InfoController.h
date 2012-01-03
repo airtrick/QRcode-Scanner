@@ -14,13 +14,15 @@
     IBOutlet UITextView * resultsView;
     NSMutableArray * listData;
     NSString * dataString;
-    IBOutlet UIImageView * image;
+    UIImage * image;
+    IBOutlet UIImageView * imageView;
     ResultAction * action;
 }
 @property (nonatomic, retain) NSMutableArray * listData;
 @property (nonatomic, retain) IBOutlet UITextView *resultsView;
 @property (strong) NSString * dataString;
-@property (strong) IBOutlet UIImageView* image;
+@property (nonatomic, retain) IBOutlet UIImageView* imageView;
+@property (strong) UIImage *image;
 @property (strong) ResultAction * action;
 -(NSString *)dataFilePath;
 @end

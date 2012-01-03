@@ -14,6 +14,7 @@
 @synthesize listData;
 @synthesize action;
 @synthesize image;
+@synthesize imageView;
 
 -(NSString *)dataFilePath
 {
@@ -54,6 +55,7 @@
 {
     [super viewDidLoad];
     resultsView.text = self.dataString;
+    imageView.image = self.image;
     NSString * filepase = [self dataFilePath];
     
     if ([[NSFileManager defaultManager] fileExistsAtPath:filepase])
