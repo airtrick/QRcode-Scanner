@@ -137,7 +137,7 @@
 
 #pragma mark -
 #pragma mark ZXingDelegateMethods
-- (void)zxingController:(ZXingWidgetController*)controller didScanResult:(id)parsedResult {
+- (void)zxingController:(ZXingWidgetController*)controller didScanResult:(id)parsedResult didScanText:(NSString*)parsedText{
     InfoController * conInfo = [self.storyboard instantiateViewControllerWithIdentifier:@"Info"];
     //conInfo.dataString = [parsedResult text];
     //[result populateActions];
@@ -160,7 +160,8 @@
     [self dismissModalViewControllerAnimated:NO];
 
     //InfoController * conInfo = [self.storyboard instantiateViewControllerWithIdentifier:@"Info"];
-    conInfo.dataString = [parsedResult stringForDisplay];
+    //conInfo.dataString = [parsedResult stringForDisplay];
+    conInfo.dataString = parsedText;
     conInfo.image = [parsedResult icon];
     [self.navigationController pushViewController:conInfo animated:NO];
 }
